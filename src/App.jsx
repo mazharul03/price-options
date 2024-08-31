@@ -12,9 +12,9 @@ function App() {
 
       {/* <DaisyNav></DaisyNav> */}
 
-      <PriceOptions></PriceOptions>
-
       <h1 className='text-7xl bg-orange-500'>Vite + React</h1>
+
+      <PriceOptions></PriceOptions>
 
     </>
   )
