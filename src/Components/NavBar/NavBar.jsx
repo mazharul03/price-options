@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from '../link/link';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { DiBlackberry } from 'react-icons/di';
 
 
 
@@ -15,7 +16,7 @@ const NavBar = () => {
     ];
 
     return (
-        <nav>
+        <nav className='text-black p-6 bg-orange-300'>
             <div className='md:hidden text-2xl' onClick={() => setOpen(!open)}>
                 {
                     open === true ?
@@ -25,9 +26,15 @@ const NavBar = () => {
                 }
 
             </div>
-            <ul className='md:flex'>
+            <ul className={`md:flex absolute md:static duration-1000 px-6
+                ${open ? 'top-16' : '-top-60'}
+                 bg-orange-300`}>
                 {
-                    routes.map(route => <Link key={route.id} route={route}></Link>)
+                    routes.map(route => <Link
+                        key={route.id}
+                        route={route}>
+
+                    </Link>)
                 }
             </ul>
 
